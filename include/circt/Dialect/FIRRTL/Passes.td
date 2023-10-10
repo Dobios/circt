@@ -782,4 +782,16 @@ def ProbeDCE : Pass<"firrtl-probe-dce", "firrtl::CircuitOp"> {
   ];
 }
 
+def FooWires : Pass<"firrtl-foo-wires", "firrtl::CircuitOp"> {
+  let summary = "Change all wires' name to foo_<n>.";
+  let description = [{
+    Very basic pass that numbers all of the wires in a given model.
+    The wires' names are then all converte to foo_<that number>.
+  }];
+  let constructor = "circt::firrtl::createFooWiresPass()";
+  let statistics = [
+    Statistic<"numChangedWires", "num-changed-wires", "Number of wires changed">
+  ];
+}
+
 #endif // CIRCT_DIALECT_FIRRTL_PASSES_TD

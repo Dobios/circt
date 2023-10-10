@@ -174,6 +174,8 @@ std::unique_ptr<mlir::Pass> createLowerGroupsPass();
 
 std::unique_ptr<mlir::Pass> createGroupSinkPass();
 
+std::unique_ptr<mlir::Pass> createFooWiresPass();
+
 /// Generate the code for registering passes.
 #define GEN_PASS_REGISTRATION
 #include "circt/Dialect/FIRRTL/Passes.h.inc"

@@ -11,6 +11,7 @@ add_circt_dialect_library(CIRCTFIRRTLTransforms
   ExtractInstances.cpp
   FinalizeIR.cpp
   FlattenMemory.cpp
+  FooWires.cpp
   GrandCentral.cpp
   GroupSink.cpp
   HoistPassthrough.cpp

@@ -34,6 +34,8 @@ LogicalResult firtool::populatePreprocessTransforms(mlir::PassManager &pm,
       opt.disableAnnotationsUnknown, opt.disableAnnotationsClassless,
       opt.lowerAnnotationsNoRefTypePorts));
 
+  pm.nest<firrtl::CircuitOp>().addPass(firrtl::createFooWiresPass());
+
   return success();
 }
 
