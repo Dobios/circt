@@ -574,8 +574,6 @@ def ConvertHWToBTOR2 : Pass<"convert-hw-to-btor2", "hw::HWModuleOp"> {
     directly used to emit btor2. The output of this pass is thus a btor2 string.
   }];
   let constructor = "circt::createConvertHWToBTOR2Pass()";
-  let dependentDialects = ["hw::HWDialect", "sv::SVDialect", "comb::CombDialect",
-                           "seq::SeqDialect"];
 }
 
 //===----------------------------------------------------------------------===//
